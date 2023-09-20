@@ -24,7 +24,7 @@ def file_info_fill(data: json,raw=0):
     type_description = attributes["type_description"]
     for i in attributes["trid"]:
         file_type_info.update(
-            {"file_type": i["file_type"], "probability": i["probability"]}
+            {"file_type": i["file_type"], "probability": str(i["probability"])}
         )
     try :
         filename = attributes["names"][0]
